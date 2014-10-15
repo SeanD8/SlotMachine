@@ -1,0 +1,148 @@
+
+/**
+ * SlotMachine- Simulates a slot machine game, picking random numbers to assign to a variable. If three random
+ * numbers picked are equal the player "wins".
+ * 
+ * @author Sean Doyle
+ * @version October 14th 2014
+ */
+import java.util.Scanner;
+
+import java.util.Random;
+
+public class SlotMachine
+{
+    public static void main (String [] args)
+    {
+        Scanner scan = new Scanner(System.in);
+        
+        Random generator = new Random();// Setting up a random number generator to be used to assign values to our variables.
+        
+        String seven = "SEVEN", apple = "APPLE", grapes = "GRAPES", diamond = "DIAMOND", shamrock = "SHAMROCK";//Same as below.
+        String bell = "BELL", strawberry = "STRAWBERRY", horseshoe = "HORSESHOE", pear = "PEAR";// Given possibilities in assigment.
+        String result1 = "", result2 = "", result3 = "";//Results of the "spin" of the machine to be determined by random number generator.
+        char spin = 's';//Gives user a qutting condition.
+        int  spin1, spin2, spin3;
+        
+        
+    
+        
+        do
+        {
+            System.out.println("");
+            System.out.println("Press S to spin or Q to quit:");
+            spin = scan.next().charAt(0);
+            
+            
+            
+           spin1 = generator.nextInt(8);//Determining the result of the first spin. Assign particular value to one of our strings.
+                        if(spin1 == 0){
+                             result1 = seven;}
+                        else 
+                            if(spin1 == 1){
+                             result1 = apple;}
+                        else 
+                            if(spin1 == 2){
+                             result1 = grapes;}
+                        else 
+                            if(spin1 == 3){
+                             result1 = diamond;}
+                        else 
+                            if(spin1 == 4){
+                             result1 = diamond;}
+                        else 
+                            if(spin1 == 5){
+                             result1 = shamrock;}
+                        else if(spin1 == 6){
+                            result1 = strawberry;}
+                        else 
+                            if(spin1 == 7){
+                            result1 = horseshoe;}
+                        else 
+                            if(spin1 == 8){
+                             result1 = pear;}
+           
+            spin2 = generator.nextInt(8);// Same as spin1 for spin2.
+                        if(spin2 == 0){
+                             result2 = seven;}
+                        else 
+                            if(spin2 == 1){
+                             result2 = apple;}
+                        else 
+                            if(spin2 == 2){
+                             result2 = grapes;}
+                        else 
+                            if(spin2 == 3){
+                             result2 = diamond;}
+                        else 
+                            if(spin2 == 4){
+                             result2 = diamond;}
+                        else 
+                            if(spin2 == 5){
+                             result1 = shamrock;}
+                        else if(spin2 == 6){
+                            result2 = strawberry;}
+                        else 
+                            if(spin2 == 7){
+                            result2 = horseshoe;}
+                        else 
+                            if(spin2 == 8){
+                             result1 = pear;}
+           
+           spin3 = generator.nextInt(8);//// Same as spin1 and spin2 for spin3.
+                        if(spin3 == 0){
+                             result3 = seven;}
+                        else 
+                            if(spin3 == 1){
+                             result3 = apple;}
+                        else 
+                            if(spin3 == 2){
+                             result3 = grapes;}
+                        else 
+                            if(spin3 == 3){
+                             result3 = diamond;}
+                        else 
+                            if(spin3 == 4){
+                             result3 = diamond;}
+                        else 
+                            if(spin3 == 5){
+                             result3 = shamrock;}
+                        else if(spin3 == 6){
+                            result3 = strawberry;}
+                        else 
+                            if(spin3 == 7){
+                            result3 = horseshoe;}
+                        else 
+                            if(spin3 == 8){
+                             result3 = pear;}
+                             
+           System.out.println("--------------------------------------------------");
+           System.out.println(result1 + "  " + result2 + "  " + result3);
+           if(result1 == result2 && result1 == result3)//If all three results are the same, the user "wins".
+                System.out.println("CONGRATULATIONS!!!!! WELL DONE!!! YOU WIN!!!");
+           System.out.println("--------------------------------------------------");
+        }
+        while(spin == 's'||spin =='S');
+        System.out.println("Have a nice day.");
+    }
+}
+           
+           
+           
+        
+    
+           
+          
+                        
+                       
+                    
+                
+                    
+        
+    
+
+    
+
+        
+       
+        
